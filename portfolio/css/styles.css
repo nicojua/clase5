@@ -1,0 +1,135 @@
+css
+/* Estilos generales */
+body {
+    padding-top: 56px; /* Para compensar la navbar fixed-top */
+}
+ 
+section {
+    padding: 60px 0;
+}
+ 
+/* Colores personalizados */
+.bg-purple {
+    background-color: #6f42c1;
+}
+ 
+.text-purple {
+    color: #6f42c1;
+}
+ 
+/* Estilos para la sección de inicio */
+#inicio {
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+}
+ 
+/* Animación para las tarjetas de habilidades */
+.card {
+    transition: transform 0.3s ease;
+}
+ 
+.card:hover {
+    transform: translateY(-10px);
+}
+ 
+/* Estilos para dispositivos móviles */
+@media (max-width: 768px) {
+    #inicio {
+        min-height: auto;
+        padding-top: 2rem;
+    }
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+  }
+  
+  .carousel {
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .opiniones {
+    display: flex;
+    transition: transform 0.5s ease;
+  }
+  
+  .opinion {
+    min-width: 100%;
+    padding: 20px;
+    background-color: #fff;
+    text-align: center;
+  }
+  
+  .comentario {
+    font-style: italic;
+    color: #555;
+  }
+  
+  .nombre {
+    font-weight: bold;
+    margin-top: 10px;
+  }
+  
+  .cargo {
+    color: #888;
+    font-size: 0.9em;
+  }
+  
+  .controles {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .controles label {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    margin: 0 5px;
+    background-color: #ccc;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .controles label:hover {
+    background-color: #888;
+  }
+  
+  input[type="radio"] {
+    display: none;
+  }
+  
+  #opinion1:checked ~ .opiniones {
+    transform: translateX(0);
+  }
+  
+  #opinion2:checked ~ .opiniones {
+    transform: translateX(-100%);
+  }
+  
+  #opinion3:checked ~ .opiniones {
+    transform: translateX(-200%);
+  }
+  
+  #opinion1:checked ~ .controles label:nth-child(1),
+  #opinion2:checked ~ .controles label:nth-child(2),
+  #opinion3:checked ~ .controles label:nth-child(3) {
+    background-color: #428bca;
+  }
+  
